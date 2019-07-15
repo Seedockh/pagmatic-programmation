@@ -1,0 +1,36 @@
+{
+  "name": "pragmatic-programmation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx babel src/ --out-dir .dist/ --copy-files",
+    "start": "node dist/index.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seedockh/pragmatic-programmation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Seedockh/pragmatic-programmation/issues"
+  },
+  "homepage": "https://github.com/Seedockh/pragmatic-programmation#readme",
+  "dependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/plugin-proposal-private-methods": "^7.4.4",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/register": "^7.4.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
+    "node": "^12.6.0",
+    "nodemon": "^1.19.1"
+  }
+}
