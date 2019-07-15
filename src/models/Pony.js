@@ -1,30 +1,26 @@
 import Toy from './Toy';
 
+let nb = ((instances = 1) => {
+  return { increment: () => instances++ }
+})();
+
 class Pony extends Toy {
 
-  #_nb = 1;
+  #_nb = nb.increment();
 
   #id;
 
-  constructor (name) {
+  constructor () {
     super();
-    console.log(this.#_nb);
-    this.id = this.#_nb;
-    this.#_nb++;
-    this.name = name;
-    this.position = 0;
-    this.isPacked = false;
-    this.type = `Pony #${this.id}`
+    this.#id = this.#_nb;
+    
+    this.setIsPacked(false);
+    this.setType(`Pony #${this.#id}`);
 
-    console.log(`${this.type} is singing -->
+    console.log(`${this.getType()} is singing -->
 Dou-double poney, j’fais izi money
 D’où tu m’connais ? Parle moi en billets violets
 Dou-double poney, j’fais izi money`);
-  }
-
-  getName() {
-    console.log(this.name);
-    return this.name;
   }
 }
 

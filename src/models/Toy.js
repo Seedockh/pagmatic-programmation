@@ -1,40 +1,19 @@
-class Toy {
-  #position;
+import ToyAbstract from './ToyAbstract';
 
-  #isPacked;
-
-  #type;
+class Toy extends ToyAbstract {
 
   constructor() {
-    console.log('\n***************************************');
-    console.log('        ~~~ NEW TOY CREATED ~~~        ');
-    console.log('***************************************');
+    super();
   }
 
   isMoved() {
     switch (this.constructor.name) {
-      case 'Pony' : console.log('\nHuuuuuuhu!\n');
+      case 'Pony' : console.log('Huuuuuuhu!\n');
         break;
-      case 'DragonBall' : console.log('\nKamé Hamé Ha!\n');
+      case 'DragonBall' : console.log('Kamé Hamé Ha!\n');
         break;
       default: null;
     }
-    return this.#position++;
-  }
-
-  getPosition() {
-    console.log(this.#position);
-    return this.#position;
-  }
-
-  getIsPacked() {
-    console.log(this.#isPacked);
-    return this.#isPacked;
-  }
-
-  getType() {
-    console.log(this.#type);
-    return this.#type;
   }
 }
 

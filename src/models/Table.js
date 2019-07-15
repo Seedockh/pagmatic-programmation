@@ -2,20 +2,26 @@ import Furniture from './Furniture';
 
 class Table extends Furniture {
 
-  #content;
+  #content = [];
 
   constructor() {
     super();
-    this.#content = [];
   }
 
   getContent() {
     return this.#content;
   }
 
-  setContent(toy) {
-    if (this.#content.length > 9) return false;
-    this.#content.push(toy);
+  setContent(object) {
+    if (this.#content.length > 9) {
+      console.log("... *CRACK* ! Wow, calm down, I'm already full !\n");
+      return false;
+    }
+    return this.#content.push(object);
+  }
+
+  takeContent(pos) {
+    return this.#content.splice(pos,1);
   }
 }
 

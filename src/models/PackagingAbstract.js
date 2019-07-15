@@ -5,9 +5,9 @@ class PackagingAbstract {
   #toy;
 
   constructor() {
-    console.log('\n======================================');
-    console.log('     ~~~ NEW PACKAGING CREATED ~~~     ');
+    console.log('\n     ~~~ NEW PACKAGING CREATED ~~~     ');
     console.log('=======================================');
+    console.log(`   >>> ${this.constructor.name}\n`);
     Object.freeze(this);
   }
 
