@@ -1,14 +1,14 @@
-import Toy from './src/models/Toy';
-import Pony from './src/models/Pony';
-import Figurine from './src/models/Figurine';
-import DragonBall from './src/models/DragonBall';
-import Packaging from './src/models/Packaging';
-import Box from './src/models/Box';
-import GiftWrap from './src/models/GiftWrap';
-import Elf from './src/models/Elf';
-import ConveyorBelt from './src/models/ConveyorBelt';
-import Table from './src/models/Table';
-import DBHeroes from './src/constants/DBHeroes';
+import Toy from './models/Toy';
+import Pony from './models/Pony';
+import Figurine from './models/Figurine';
+import DragonBall from './models/DragonBall';
+import Packaging from './models/Packaging';
+import Box from './models/Box';
+import GiftWrap from './models/GiftWrap';
+import Elf from './models/Elf';
+import ConveyorBelt from './models/ConveyorBelt';
+import Table from './models/Table';
+import DBHeroes from './constants/DBHeroes';
 
 console.log(`
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
