@@ -5,13 +5,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _ConveyorBelt2 = _interopRequireDefault(require("../models/ConveyorBelt"));
+var _PTapisRoulant2 = _interopRequireDefault(require("./PTapisRoulant"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
@@ -25,17 +29,30 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 var ConveyorBeltFactory =
 /*#__PURE__*/
-function (_ConveyorBelt) {
-  _inherits(ConveyorBeltFactory, _ConveyorBelt);
+function (_PTapisRoulant) {
+  _inherits(ConveyorBeltFactory, _PTapisRoulant);
 
   function ConveyorBeltFactory() {
     _classCallCheck(this, ConveyorBeltFactory);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(ConveyorBeltFactory).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(ConveyorBeltFactory).call(this));
   }
 
+  _createClass(ConveyorBeltFactory, [{
+    key: "makeConveyorBelt",
+    value: function makeConveyorBelt() {
+      var box = this.createBox();
+      var conveyorBelt = this.createConveyorBelt();
+      conveyorBelt.put(box);
+      return {
+        object: box,
+        furniture: conveyorBelt
+      };
+    }
+  }]);
+
   return ConveyorBeltFactory;
-}(_ConveyorBelt2["default"]);
+}(_PTapisRoulant2["default"]);
 
 var _default = ConveyorBeltFactory;
 exports["default"] = _default;

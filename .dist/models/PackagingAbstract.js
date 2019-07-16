@@ -32,8 +32,7 @@ function () {
     });
 
     console.log('\n     ~~~ NEW PACKAGING CREATED ~~~     ');
-    console.log('=======================================');
-    console.log("   >>> ".concat(this.constructor.name, "\n"));
+    console.log("     >>> ".concat(this.constructor.name, "\n"));
     Object.freeze(this);
   }
 

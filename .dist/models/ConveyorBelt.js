@@ -7,11 +7,7 @@ exports["default"] = void 0;
 
 var _Furniture2 = _interopRequireDefault(require("./Furniture"));
 
-var _DragonBall = _interopRequireDefault(require("./DragonBall"));
-
 var _GiftWrap = _interopRequireDefault(require("./GiftWrap"));
-
-var _DBHeroes = _interopRequireDefault(require("../constants/DBHeroes"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -71,13 +67,13 @@ function (_Furniture) {
     }
   }, {
     key: "inButton",
-    value: function inButton(elf) {
-      var toy = new _DragonBall["default"](_DBHeroes["default"].sangoku);
+    value: function inButton() {
       var paper = new _GiftWrap["default"]();
-      elf.pack(paper, toy);
       this.addObject(paper);
 
       _classPrivateFieldSet(this, _isBusy, true);
+
+      return this;
     }
   }, {
     key: "outButton",

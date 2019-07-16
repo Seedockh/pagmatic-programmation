@@ -27,8 +27,7 @@ function () {
     });
 
     console.log('\n     ~~~ NEW FURNITURE CREATED ~~~      ');
-    console.log('________________________________________');
-    console.log("   >>> ".concat(this.constructor.name, "\n"));
+    console.log("     >>> ".concat(this.constructor.name, "\n"));
     Object.freeze(this);
   }
 
@@ -38,6 +37,11 @@ function () {
       return _classPrivateFieldGet(this, _objects).map(function (obj) {
         return obj.constructor.name;
       });
+    }
+  }, {
+    key: "getArrayObjects",
+    value: function getArrayObjects() {
+      return _classPrivateFieldGet(this, _objects);
     }
   }, {
     key: "setObjects",

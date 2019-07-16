@@ -67,7 +67,11 @@ function (_Furniture) {
   }, {
     key: "takeContent",
     value: function takeContent(pos) {
-      return _classPrivateFieldGet(this, _content).splice(pos, 1);
+      var object = _classPrivateFieldGet(this, _content)[pos];
+
+      _classPrivateFieldGet(this, _content).splice(pos, 1);
+
+      return object;
     }
   }]);
 

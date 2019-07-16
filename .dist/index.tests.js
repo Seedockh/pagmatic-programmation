@@ -1,26 +1,20 @@
 "use strict";
 
-var _Toy = _interopRequireDefault(require("./src/models/Toy"));
+var _Pony = _interopRequireDefault(require("./models/Pony"));
 
-var _Pony = _interopRequireDefault(require("./src/models/Pony"));
+var _DragonBall = _interopRequireDefault(require("./models/DragonBall"));
 
-var _Figurine = _interopRequireDefault(require("./src/models/Figurine"));
+var _Box = _interopRequireDefault(require("./models/Box"));
 
-var _DragonBall = _interopRequireDefault(require("./src/models/DragonBall"));
+var _GiftWrap = _interopRequireDefault(require("./models/GiftWrap"));
 
-var _Packaging = _interopRequireDefault(require("./src/models/Packaging"));
+var _Elf = _interopRequireDefault(require("./models/Elf"));
 
-var _Box = _interopRequireDefault(require("./src/models/Box"));
+var _ConveyorBelt = _interopRequireDefault(require("./models/ConveyorBelt"));
 
-var _GiftWrap = _interopRequireDefault(require("./src/models/GiftWrap"));
+var _Table = _interopRequireDefault(require("./models/Table"));
 
-var _Elf = _interopRequireDefault(require("./src/models/Elf"));
-
-var _ConveyorBelt = _interopRequireDefault(require("./src/models/ConveyorBelt"));
-
-var _Table = _interopRequireDefault(require("./src/models/Table"));
-
-var _DBHeroes = _interopRequireDefault(require("./src/constants/DBHeroes"));
+var _DBHeroes = _interopRequireDefault(require("./constants/DBHeroes"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

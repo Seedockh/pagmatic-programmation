@@ -5,13 +5,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _Table2 = _interopRequireDefault(require("../models/Table"));
+var _PTable2 = _interopRequireDefault(require("./PTable"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
@@ -25,17 +29,32 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 var TableFactory =
 /*#__PURE__*/
-function (_Table) {
-  _inherits(TableFactory, _Table);
+function (_PTable) {
+  _inherits(TableFactory, _PTable);
 
   function TableFactory() {
     _classCallCheck(this, TableFactory);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(TableFactory).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(TableFactory).call(this));
   }
 
+  _createClass(TableFactory, [{
+    key: "makeTable",
+    value: function makeTable() {
+      var pony = this.createPony();
+      var dragonball = this.createDragonBall();
+      var table = this.createTable();
+      table.put(pony);
+      table.put(dragonball);
+      return {
+        objects: [pony, dragonball],
+        furniture: table
+      };
+    }
+  }]);
+
   return TableFactory;
-}(_Table2["default"]);
+}(_PTable2["default"]);
 
 var _default = TableFactory;
 exports["default"] = _default;

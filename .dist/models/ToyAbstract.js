@@ -32,7 +32,6 @@ function () {
     });
 
     console.log('\n        ~~~ NEW TOY CREATED ~~~        ');
-    console.log('***************************************');
     Object.freeze(this);
   }
 

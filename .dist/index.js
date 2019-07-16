@@ -1,70 +1,29 @@
 "use strict";
 
-var _Toy = _interopRequireDefault(require("./models/Toy"));
+var _TableFactory = _interopRequireDefault(require("./patterns/TableFactory"));
 
-var _Pony = _interopRequireDefault(require("./models/Pony"));
-
-var _Figurine = _interopRequireDefault(require("./models/Figurine"));
-
-var _DragonBall = _interopRequireDefault(require("./models/DragonBall"));
-
-var _Packaging = _interopRequireDefault(require("./models/Packaging"));
-
-var _Box = _interopRequireDefault(require("./models/Box"));
-
-var _GiftWrap = _interopRequireDefault(require("./models/GiftWrap"));
+var _ConveyorBeltFactory = _interopRequireDefault(require("./patterns/ConveyorBeltFactory"));
 
 var _Elf = _interopRequireDefault(require("./models/Elf"));
-
-var _ConveyorBelt = _interopRequireDefault(require("./models/ConveyorBelt"));
-
-var _Table = _interopRequireDefault(require("./models/Table"));
-
-var _DBHeroes = _interopRequireDefault(require("./constants/DBHeroes"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 console.log("\n||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n\n                         ###   RUSH EFREI KLAUS   ###\n\n||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
-var littlePony = new _Pony["default"]();
-var redPony = new _Pony["default"]();
-var myBejita = new _DragonBall["default"](_DBHeroes["default"].bejita);
-var box = new _Box["default"]();
-var paper = new _GiftWrap["default"]();
-var legolas = new _Elf["default"]('Legolas');
-var tapis = new _ConveyorBelt["default"]();
-var table = new _Table["default"]();
-console.log("###### STEP N.1 ######\n");
-littlePony.isMoved();
-myBejita.isMoved();
-console.log("###### STEP N.2 ######\n");
-legolas.pack(box, myBejita);
-box.open();
-legolas.pack(box, myBejita);
+console.log("\n-----------------------------------------------------------\n   MAKING A TABLE :\n-----------------------------------------------------------");
+var tableFactory = new _TableFactory["default"]();
+var table = tableFactory.makeTable();
+console.log("\n-----------------------------------------------------------\n   MAKING A CONVEYOR BELT :\n-----------------------------------------------------------");
+var conveyorBeltFactory = new _ConveyorBeltFactory["default"]();
+var conveyorBelt = conveyorBeltFactory.makeConveyorBelt();
+console.log("\n-----------------------------------------------------------\n   PACKING AND SENDING THE MAGIC :\n-----------------------------------------------------------");
+var elrond = new _Elf["default"]('Elrond');
+conveyorBelt.object.open();
+elrond.pack(conveyorBelt.object, table.objects[0]);
 console.log('\n');
-legolas.pack(paper, redPony);
-legolas.pack(paper, redPony);
+elrond.out(conveyorBelt.furniture);
 console.log('\n');
-legolas.unpack(paper);
-legolas.unpack(paper);
+var updateConveyorBelt = elrond["in"](conveyorBelt.furniture);
+elrond.pack(updateConveyorBelt.getArrayObjects()[0], table.objects[1]);
 console.log('\n');
-console.log("###### STEP N.3 ######\n");
-legolas.put(littlePony, table);
-legolas.put(myBejita, table);
-legolas.look(table);
-console.log('\n');
-legolas.take(0, table);
-legolas.look(table);
-console.log('\n');
-legolas.put(littlePony, tapis);
-legolas.put(myBejita, tapis);
-legolas.look(tapis);
-console.log('\n');
-legolas.take(littlePony, tapis);
-legolas.look(tapis);
-console.log('\n');
-legolas["in"](tapis);
-legolas.look(tapis);
-console.log('\n');
-legolas.out(tapis);
-legolas.look(tapis);
+elrond.out(conveyorBelt.furniture);
 console.log('\n');
