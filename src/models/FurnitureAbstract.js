@@ -4,8 +4,7 @@ class FurnitureAbstract {
 
   constructor() {
     console.log('\n     ~~~ NEW FURNITURE CREATED ~~~      ');
-    console.log('________________________________________');
-    console.log(`   >>> ${this.constructor.name}\n`);
+    console.log(`     >>> ${this.constructor.name}\n`);
     Object.freeze(this);
   }
 

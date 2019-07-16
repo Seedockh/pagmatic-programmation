@@ -21,7 +21,9 @@ class Table extends Furniture {
   }
 
   takeContent(pos) {
-    return this.#content.splice(pos,1);
+    const object = this.#content[pos];
+    this.#content.splice(pos,1);
+    return object;
   }
 }
 

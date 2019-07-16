@@ -6,8 +6,7 @@ class PackagingAbstract {
 
   constructor() {
     console.log('\n     ~~~ NEW PACKAGING CREATED ~~~     ');
-    console.log('=======================================');
-    console.log(`   >>> ${this.constructor.name}\n`);
+    console.log(`     >>> ${this.constructor.name}\n`);
     Object.freeze(this);
   }
 

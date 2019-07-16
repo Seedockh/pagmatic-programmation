@@ -1,7 +1,5 @@
 import Furniture from './Furniture';
-import DragonBall from './DragonBall';
 import GiftWrap from './GiftWrap';
-import DBHeroes from '../constants/DBHeroes';
 
 class ConveyorBelt extends Furniture {
 
@@ -20,10 +18,8 @@ class ConveyorBelt extends Furniture {
     this.#isBusy = bool;
   }
 
-  inButton(elf) {
-    const toy = new DragonBall(DBHeroes.sangoku);
+  inButton() {
     const paper = new GiftWrap();
-    elf.pack(paper, toy);
     this.addObject(paper);
     this.#isBusy = true;
   }
