@@ -14,7 +14,7 @@ class TableFactory extends PTable {
     table.put(pony);
     table.put(dragonball);
 
-    console.log(table.getObjects());
+    return { objects: [ pony, dragonball ], furniture: table }
   }
 }
 

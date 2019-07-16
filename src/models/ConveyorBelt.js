@@ -22,6 +22,7 @@ class ConveyorBelt extends Furniture {
     const paper = new GiftWrap();
     this.addObject(paper);
     this.#isBusy = true;
+    return this;
   }
 
   outButton() {

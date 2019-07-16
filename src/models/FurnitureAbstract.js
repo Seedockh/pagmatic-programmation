@@ -12,6 +12,10 @@ class FurnitureAbstract {
     return this.#objects.map( obj => obj.constructor.name );
   }
 
+  getArrayObjects() {
+    return this.#objects;
+  }
+
   setObjects(objects) {
     return this.#objects = objects;
   }

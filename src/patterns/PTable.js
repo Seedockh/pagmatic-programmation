@@ -5,7 +5,7 @@ import DBHeroes from '../constants/DBHeroes';
 
 // GET THE TOYS HERE
 class PTable {
-  
+
   createPony() {
     const pony = new Pony();
     return pony;

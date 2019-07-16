@@ -12,7 +12,7 @@ class ConveyorBeltFactory extends PTapisRoulant {
 
     conveyorBelt.put(box);
 
-    console.log(conveyorBelt.getObjects());
+    return { object: box, furniture: conveyorBelt }
   }
 }
 
